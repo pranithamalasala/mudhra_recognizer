@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudra Studio AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">**Mudra Studio AI**</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('studio') }}" class="active">Live Studio</a>
+            <a href="{{ url_for('library') }}">Mudra Library</a>
+            <a href="{{ url_for('about') }}">About App</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Live Mudra Recognition Studio</h1>
+        <p class="subtitle">Position your hand clearly within the frame. Your session log will update below.</p>
+
+        <div class="studio-grid">
+            
+            <div class="video-box">
+                <div class="video-header">
+                    <span>📹 Live Camera Feed</span>
+                </div>
+                <img src="{{ url_for('video_feed') }}" class="camera-feed" alt="Live Feed">
+            </div>
+
+            <div class="sidebar">
+                <div class="video-header">
+                    <span>📋 Current Session Log</span>
+                </div>
+                
+                <div class="log-box">
+                    <p style="text-align:center; color: #666; padding-top: 20px;">
+                        Perform a mudra to see it listed here!
+                    </p>
+                    </div>
+
+                <button class="btn-primary">🔄 Reset Session Log</button>
+            </div>
+        </div>
+
+        <div class="share-section">
+            <form action="{{ url_for('send_email') }}" method="POST" style="width: 100%; display: flex; gap: 10px; justify-content: center; align-items: center;">
+                <span style="font-weight: bold;">Share Your Progress:</span>
+                <input type="email" name="recipient_email" placeholder="Enter recipient's email address..." required>
+                <button type="submit" class="btn-primary" style="width: auto;">Send Report 🚀</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

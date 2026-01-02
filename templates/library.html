@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library - Mudra Studio AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px 0; }
+        .mudra-card { background: #1e1b4b; padding: 20px; border-radius: 12px; border: 1px solid #3b0764; transition: 0.3s; }
+        .mudra-card:hover { transform: translateY(-5px); border-color: #a855f7; }
+        .mudra-card h3 { color: #e9d5ff; margin-top: 0; }
+        .mudra-desc { color: #cbd5e1; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">**Mudra Studio AI**</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('studio') }}">Live Studio</a>
+            <a href="{{ url_for('library') }}" class="active">Mudra Library</a>
+            <a href="{{ url_for('about') }}">About App</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Mudra Library</h1>
+        <p class="subtitle">Explore the definitions and meanings of the supported Hasta Mudras.</p>
+
+        <div class="library-grid">
+            <div class="mudra-card"><h3>1. Pataka (Flag)</h3><p class="mudra-desc">All fingers straight and together. Used to denote a forest, river, or beginning of a dance.</p></div>
+            <div class="mudra-card"><h3>2. Tripataka (Three Parts)</h3><p class="mudra-desc">Ring finger bent, others straight. Used to denote a crown, tree, or lifting a veil.</p></div>
+            <div class="mudra-card"><h3>3. Shikharam (Peak)</h3><p class="mudra-desc">Thumbs up gesture. Used to denote a bow, pillar, or questioning.</p></div>
+            <div class="mudra-card"><h3>4. Ardhapataka (Half Flag)</h3><p class="mudra-desc">Index and Middle fingers extended. Used to denote a dagger, tower, or horn.</p></div>
+            <div class="mudra-card"><h3>5. Mayura (Peacock)</h3><p class="mudra-desc">Ring finger touches thumb tip. Used to denote a peacock, creeper, or bird.</p></div>
+            <div class="mudra-card"><h3>6. Arala (Bent)</h3><p class="mudra-desc">Index finger bent. Used to denote drinking poison or a strong wind.</p></div>
+        </div>
+    </div>
+</body>
+</html>

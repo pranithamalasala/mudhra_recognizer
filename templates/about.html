@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Mudra Studio AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">**Mudra Studio AI**</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('studio') }}">Live Studio</a>
+            <a href="{{ url_for('library') }}">Mudra Library</a>
+            <a href="{{ url_for('about') }}" class="active">About App</a>
+        </div>
+    </nav>
+
+    <div class="container" style="text-align: center; max-width: 800px;">
+        <h1 style="font-size: 3rem; margin-top: 40px;">CAPTURED.</h1>
+        <p style="color: #a855f7; font-weight: bold; letter-spacing: 2px;">THE SCIENCE AND SOUL BEHIND MUDRA STUDIO AI</p>
+        
+        <div style="background: #1e1b4b; padding: 40px; border-radius: 20px; margin-top: 40px; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <h3 style="color: #e9d5ff;">Our Essential Digital Guide</h3>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-top: 20px;">
+                Mudra Studio AI was founded to "bridge the gap" between ancient dance traditions and modern technology.
+                We use sophisticated computer vision to track, analyze, and correct hand positions in real-time.
+                This provides students with precise, objective feedback—a tool never before available outside of a live classroom setting.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

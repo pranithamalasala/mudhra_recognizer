@@ -1,0 +1,161 @@
+/* static/style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top right, #2e1065, #0f0518);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e9d5ff;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #a855f7;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* Studio Layout */
+.studio-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Video Feed Box */
+.video-box {
+    background: #1e1b4b;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.video-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #c084fc;
+    font-weight: bold;
+}
+
+.camera-feed {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #a855f7; /* The glowing purple border */
+    box-shadow: 0 0 15px #a855f7;
+}
+
+/* Sidebar / Session Log */
+.sidebar {
+    background: #1e1b4b;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    text-align: left;
+}
+
+.log-box {
+    background: #0f0518;
+    height: 300px;
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #3b0764;
+    margin-bottom: 20px;
+}
+
+.mudra-item {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check-icon {
+    color: #a855f7;
+}
+
+/* Buttons and Inputs */
+.btn-primary {
+    background: linear-gradient(90deg, #9333ea, #7e22ce);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+}
+
+/* Email Section */
+.share-section {
+    margin-top: 30px;
+    background: #2e1065;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="email"] {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #581c87;
+    background: #0f0518;
+    color: white;
+    width: 60%;
+    outline: none;
+}

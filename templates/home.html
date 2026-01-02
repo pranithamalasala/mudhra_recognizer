@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Mudra Studio AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .home-container { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; text-align: center; }
+        .hero-btn { background: #a855f7; padding: 15px 40px; border-radius: 30px; text-decoration: none; color: white; font-weight: bold; font-size: 1.2rem; margin-top: 20px; transition: 0.3s; }
+        .hero-btn:hover { background: #9333ea; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">**Mudra Studio AI**</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="active">Home</a>
+            <a href="{{ url_for('studio') }}">Live Studio</a>
+            <a href="{{ url_for('library') }}">Mudra Library</a>
+            <a href="{{ url_for('about') }}">About App</a>
+        </div>
+    </nav>
+
+    <div class="container home-container">
+        <h1>Welcome to Mudra Studio AI</h1>
+        <p class="subtitle" style="font-size: 1.2rem; max-width: 600px;">
+            Your personal real-time companion for mastering the art of **Hasta Mudras**. 
+            Analyze your hand gestures with precision using advanced AI.
+        </p>
+        <a href="{{ url_for('studio') }}" class="hero-btn">📷 Start Practice Session</a>
+    </div>
+</body>
+</html>
